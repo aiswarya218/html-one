@@ -1,0 +1,150 @@
+.product-details-content {
+  padding: 0 20px;
+  flex: 1;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.compare-share-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  font-size: 13px;
+  color: #2874f0;
+  cursor: pointer;
+}
+
+.path {
+  font-size: 12px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: 500; 
+  margin-bottom: 8px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.rating-badge {
+  background: #388e3c;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.assured-badge {
+  margin-left: 10px;
+  color: #2874f0;
+  font-weight: 500;
+}
+
+.divider {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.price-info {
+  margin: 10px 0;
+}
+
+.extra-discount {
+  color: #388e3c;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  margin: 6px 0;
+}
+
+.current-price {
+  font-weight: 600;
+  color: #212121;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #878787;
+  font-size: 14px;
+}
+
+.discount {
+  color: #388e3c;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.promise-fee,
+.delivery-date {
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.link {
+  color: #2874f0;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.offers-section {
+  margin-top: 15px;
+}
+
+.offers-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.offer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.bank-icon {
+  color: #2874f0;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.view-more-offers {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.buy-option-exchange {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.buy-label {
+  font-size: 14px;
+  color: #212121;
+}
+
+.buy-price {
+  font-weight: 600;
+  color: #212121;
+}

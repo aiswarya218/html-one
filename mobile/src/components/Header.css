@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #2874f0;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.explore {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.plus {
+  color: yellow;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  background: white;
+  color: #2874f0;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  background: white;
+  color: #2874f0;
+  border: none;
+  padding: 6px 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}

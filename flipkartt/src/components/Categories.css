@@ -1,0 +1,42 @@
+.categories {
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  padding: 30px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.categories img {
+  filter: none;
+  opacity: 1;
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: 100%;
+  margin: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 211 / 35;
+}
+
+.sale-box {
+  background-color: #fff;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sale-box:hover {
+  background-color: #f0f0f0;
+}
+
+.sale-box button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}

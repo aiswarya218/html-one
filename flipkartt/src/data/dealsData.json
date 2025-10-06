@@ -1,0 +1,302 @@
+[
+  {
+    "title": "Top Deals",
+    "products": [
+      {
+        "name": "Fans & Geysers",
+        "subtitle": "From ₹999",
+        "img": "./images/-original-imahd77j8jh7hmge(1).jpeg"
+      },
+      {
+        "name": "Home Essentials",
+        "subtitle": "Shop Now!",
+        "img": "./images/-original-imahdt5pq9bzzstb(2).jpeg"
+      },
+      {
+        "name": "Projector",
+        "subtitle": "From ₹6990",
+        "img": "./images/atom-3x-native-fhd-1080p-4k-support-13-0-android-projector-300-original-imahbxepqgqurfh7.jpeg"
+      },
+      {
+        "name": "Best Selling Mobile Speaker",
+        "subtitle": "From ₹499*",
+        "img": "./images/srs-xb23-sony-original-imaftk66vjxp86h5(1).jpeg"
+      },
+      {
+        "name": "Monitors",
+        "subtitle": "From ₹6599",
+        "img": "./images/-original-imah9ax82pdwa5fm.jpeg"
+      },
+      {
+        "name": "Fastrack Smartwatch",
+        "subtitle": "From ₹1199",
+        "img": "./images/-original-imagxrhetgfuebnn(2).jpeg"
+      },
+      {
+        "name": "Printers",
+        "subtitle": "From ₹2336",
+        "img": "./images/-original-imafkykednshkhx5(3).jpeg"
+      },
+      {
+        "name": "Wall Clocks",
+        "subtitle": "From ₹3000",
+        "img": "./images/wall-clock-for-home-decore-28-wallclock-1-ga-analog-gulabi-art-original-imah2xxdydfj9suz.jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Top Products for you",
+    "products": [
+      {
+        "name": "PUMA,ADIDAS...",
+        "subtitle": "Min. 65% Off",
+        "img": "./images/92c9479d204366a0.jpg"
+      },
+      {
+        "name": "Geared Cycles",
+        "subtitle": "Up to 70% Off",
+        "img": "./images/beast-24t-with-front-suspension-and-disc-brake-and-complete-original-imagvz8yyy8gyzxg.jpeg"
+      },
+      {
+        "name": "Top Selling Stationery",
+        "subtitle": "From ₹49",
+        "img": "./images/119766-flair-original-imag9nzubznagufg(1).jpeg"
+      },
+      {
+        "name": "Best Of Action Toys",
+        "subtitle": "Up to 80% Off",
+        "img": "./images/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m(2).jpeg"
+      },
+      {
+        "name": "Sneakers",
+        "subtitle": "Upto 75% Off",
+        "img": "./images/-original-imahegzp2y6svrnp.jpeg"
+      },
+      {
+        "name": "Soft Toys",
+        "subtitle": "Upto 70% Off",
+        "img": "./images/4-feet-pink-very-beautiful-best-quality-for-special-gift-125-13-original-imafgv92puzkdytg(1).jpeg"
+      },
+      {
+        "name": "Food Spreads",
+        "subtitle": "Upto 75% Off",
+        "img": "./images/510-chocolate-peanut-butter-crunchy-510g-jar-nut-butter-original-imagyzpqqfaguxny(1).jpeg"
+      },
+      {
+        "name": "Scooters",
+        "subtitle": "Upto 30% Off",
+        "img": "./images/-original-imahgyjz2dyuxbut.jpeg"
+      }
+    ]
+  },
+    {
+    "title": "Mobiles",
+    "products": [
+      {
+        "name": "Google Pixel 9",
+        "subtitle": "From ₹62,999*",
+        "img": "./images/-original-imahegqhrtpsz7sd.jpeg"
+      },
+      {
+        "name": "Samsung Galaxy S25 5G",
+        "subtitle": "From ₹68,999*",
+        "img": "./images/-original-imahfkvfhpfaftmb.jpeg"
+      },
+      {
+        "name": "POCO C75 5G",
+        "subtitle": "From ₹15,999*",
+        "img": "./images/-original-imahbr2cz5apcwze (1).jpeg"
+      },
+      {
+        "name": "vivo T4 Lite 5G",
+        "subtitle": "From ₹9,999",
+        "img": "./images/-original-imah2hfpxtwagduh.jpeg"
+      },
+      {
+        "name": "Realme P3x 5G", 
+        "subtitle": "From ₹12,499",
+        "img": "./images/-original-imah9gtmya9qhqse.jpeg"
+      },
+      {
+        "name": "Motorola G 5G",
+        "subtitle": "From ₹10,799",
+        "img": "./images/-original-imahegy79yrrndka.jpeg"
+      },
+      {
+        "name": "Motorola G22",
+        "subtitle": "From ₹13,500",
+        "img": "./images/-original-imah83eztbdcsknu (1).jpeg"
+      },
+      {
+        "name": "Realme Narzo 80 Lite",
+        "subtitle": "From ₹24,499",
+        "img": "./images/narzo-80-lite-4g-rmx5313-realme-original-imahegxgdvbva7zf.jpeg"
+      }
+    ]
+  },
+  {
+    "title": "Best Deals on Beauty and More",
+    "products": [
+      {
+        "name": "Perfumes and Fragnances",
+        "subtitle": "Under ₹399",                  
+        "img": "./images/"
+      },
+      {
+        "name": "Hair Care",
+        "subtitle": "./images/",
+        "img": "Min 40% Off"
+      },
+      {
+        "name": "Personal Care",
+        "subtitle": "./images/",
+        "img": "Up to 50% Off"
+      },
+      {
+        "name": "Makeup",
+        "subtitle": "Under ₹499",
+        "img": "./images/"
+      },
+      {
+        "name": "Giftable Instruments",
+        "subtitle": "./images/", 
+        "img": "Min 30% Off"
+      },
+      {
+        "name": "Cycles", 
+        "subtitle": "./images/", 
+        "img": "Up to 45% Off"
+      },
+      {
+        "name": "Bike Accessories", 
+        "subtitle": "./images/", 
+        "img": "Min 30% Off"
+      },
+      {
+        "name": "Pet Foods",
+        "subtitle": "./images/-original-imahy4zjnj2fcmf.jpeg", 
+        "img": "Up to 20% Off"
+      }
+    ]
+  },
+  {
+    "title": "Shop Your Favorites",
+    "products": [
+      {
+        "name": "True Wireless",
+        "subtitle": "Grab Or Gone",
+        "img": "./images/bs-ultrapood-bullstorm-original-imahcus46hzumv9a.jpeg"
+      },
+      {
+        "name": "Neckband",
+        "subtitle": "Min. 50% Off",
+        "img": "./images/soul-100-hours-playtime-wireless-neckband-earphone-ucool-original-imahffwhh97zede9.jpeg"
+      },
+      {
+        "name": "Smart Watches",
+        "subtitle": "Min. 40% Off",
+        "img": "./images/-original-imah76jt64ffmwg4.jpeg"
+      },
+      {
+        "name": "Trimmers",
+        "subtitle": "Min. 50% Off",
+        "img": "./images/1-10-mm-t-blade-hair-clippr-waterproof-trimmer-90-min-stainless-original-imagn9xmrjfzfkyn.jpeg"
+      }
+    ]
+  },
+    {
+    "title": "Life style",
+    "products": [
+      {
+        "name": "Stylish picks!",
+        "subtitle": "From ₹249*",
+        "img": "./images/l-nb-sh-3742-pnk-nobarr-original-imaguf2yrca2duph.jpeg"
+      },
+      {
+        "name": "Hottest Steals",
+        "subtitle": "Under ₹499",
+        "img": "./images/90fb20e8d1617621.jpg"
+      },
+      {
+        "name": "Trendy Jewellery",
+        "subtitle": "From ₹399",
+        "img": "./images/f9771e313ebf0e79.jpg"
+      },
+      {
+        "name": "Echowear",
+        "subtitle": "Under ₹399",
+        "img": "./images/5c9eceda3fea3555.jpg"
+      },
+      {
+        "name": "Xylophone Guitar", 
+        "subtitle": "From ₹399",
+        "img": "./images/xylophone-guitar-wooden-kids-first-musical-sound-instrument-toy-original-imafyfszcjkjcwwz.jpeg"
+      },
+      {
+        "name": "Trendy Bags",
+        "subtitle": "Under ₹699",
+        "img": "./images/f1ffa6330a602013.jpeg"
+      },
+      {
+        "name": "Mop Sets",
+        "subtitle": "Under ₹499",
+        "img": "./images/-original-imahy4zjnhj2fcmf.jpeg"
+      },
+      {
+        "name": "Kurta sets..",
+        "subtitle": "Min. 75% Off",
+        "img": "./images/fashion2.webp"
+      }
+    ]
+  },
+     {
+    "title": "Recently Viewed",
+    "products": [
+      {
+        "name": "Realme Laptop",
+        "subtitle": "₹79,499",
+        "img": "./images/-original-imahcd9ja5ahdeas.jpeg"  
+      },
+      {
+        "name": "ASUS Lumina OLED",
+        "subtitle": "₹1,04,975",
+        "img": "./images/ux3402za-km531ws-thin-and-light-laptop-asus-original-imah3d3dkunqwfap.jpeg"
+      },
+      {
+        "name": "Microsoft 2-in-1 Laptop",
+        "subtitle": "₹1,25,499",
+        "img": "./images/microsoft-na-2-in-1-laptop-original-imafbgqzhjhmthh2(1).jpeg"
+      },
+      {
+        "name": "IN Book Laptop",
+        "subtitle": "₹1,49,275",
+        "img": "./images/-original-imahcd9dvqz3unv8.jpeg"
+      },
+      {
+        "name": "Microsoft V-Book", 
+        "subtitle": "From ₹1,02,299",
+        "img": "./images/microsoft-na-2-in-1-laptop-original-imafbgqzhjhmthh2.jpeg"
+      },
+      {
+        "name": "Apple Macbook Pro",
+        "subtitle": "₹1,21,499",
+        "img": "./images/-original-imagfdeu9rmugapt.jpeg"
+      },
+      {
+        "name": "GoPro Hero Camera",
+        "subtitle": "₹14,999",
+        "img": "./images/na-hero-chdhb-501-gopro-original-imaf3qyp6hmyhk73.jpeg"
+      },
+      {
+        "name": "Women Loose Jeans",
+        "subtitle": "₹396",
+        "img": "./images/34-002wjnc-stylefabs-original-imahbzq9chggpsx7.jpeg"
+      },
+      {
+        "name": "Black Cotton Shirt",
+        "subtitle": "₹1499",
+        "img": "./images/4xl-c301-black-dennis-lingo-original-imah47rhturywh7v(1).jpeg"
+      }
+    ]
+  }
+]

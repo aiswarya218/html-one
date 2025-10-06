@@ -1,0 +1,255 @@
+.app-container {
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #f1f3f6;
+    min-height: 100vh;
+}
+
+.product-page-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+    color: #2874F0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.product-gallery {
+    display: flex;
+    flex: 0 0 350px; 
+    margin-right: 40px;
+}
+
+.thumbnails {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.thumbnail-item {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: border-color 0.15s;
+}
+
+.thumbnail-item:hover,
+.thumbnail-item.active {
+    border-color: #2874F0;
+}
+
+.thumbnail-item img {
+    width: 100%;
+    display: block;
+}
+
+.main-image-container {
+    flex: 1;
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+.image-highlight-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 80%;
+    pointer-events: none;
+}
+
+
+.image-highlight-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 80%;
+    pointer-events: none;
+    font-size: 14px;
+    margin: 5px 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.highlight-text {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.product-details-content {
+    flex: 1;
+}
+
+.compare-share-actions {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.action-item {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.path {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating-badge {
+    background-color: #388e3c;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.reviews {
+    font-size: 14px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.assured-badge {
+    font-size: 14px;
+    color: #2874F0;
+    font-weight: 600;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.extra-discount {
+    color: #388e3c;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.price-container {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #878787;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.discount {
+    color: #388e3c;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.promise-fee {
+    font-size: 14px;
+    color: #878787;
+    margin-bottom: 10px;
+}
+
+.delivery-date {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.offers-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.offer-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.bank-icon {
+    color: #388e3c;
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+.offer-text {
+    color: #333;
+}
+
+.view-more-offers {
+    display: block;
+    margin-top: 10px;
+}
+
+.buy-option-exchange {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+}
+
+.buy-label {
+    font-size: 16px;
+    margin-left: 10px;
+    flex-grow: 1; 
+}
+
+.buy-price {
+    font-size: 16px;
+    font-weight: 600;
+}

@@ -1,13 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import './App.css'; 
-import { DiFirebase, DiSafari } from 'react-icons/di';
-import { faF } from '@fortawesome/free-solid-svg-icons';
-import { TbEyeEdit } from 'react-icons/tb';
-import { WiWindBeaufort0 } from 'react-icons/wi';
-import { GiGClef } from 'react-icons/gi';
-import { MdDoDisturbOff } from 'react-icons/md';
-import { FaDAndD, FaDraft2Digital } from 'react-icons/fa';
-import { BsFillDeviceHddFill } from 'react-icons/bs';
 
 // Helper to format large numbers
 const formatNumber = (num) => {
@@ -26,6 +18,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.4,
     "numRatings": 3246,
     "numReviews": 370,
+    "offprice": "Extra ₹5000 off",
     "price": "₹11,499",
     "originalPrice": "₹15,999",
     "discount": "28%",
@@ -49,6 +42,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.7,
     "numRatings": 8901,
     "numReviews": 1025,
+    "offprice": "Extra ₹11000 off",
     "price": "₹69,999",
     "originalPrice": "₹80,999",
     "discount": "13%",
@@ -72,6 +66,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.3,
     "numRatings": 27594,
     "numReviews": 1747,
+    "offprice": "Extra ₹16000 off",
     "price": "₹17,999",
     "originalPrice": "₹33,999",
     "discount": "47%",
@@ -95,6 +90,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.6,
     "numRatings": 19106,
     "numReviews": 793,
+    "offprice": "Extra ₹10000 off",
     "price": "₹69,999",
     "originalPrice": "₹79,999", 
     "discount": "12%",
@@ -118,6 +114,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.7,
     "numRatings": 89031,
     "numReviews": 1025,
+    "offprice": "Extra ₹6000 off",
     "price": "₹22,999",
     "originalPrice": "₹28,999",
     "discount": "20%",
@@ -141,6 +138,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.5,
     "numRatings": 51770,
     "numReviews": 2478,
+    "offprice": "Extra ₹5000 off",
     "price": "₹22,999",
     "originalPrice": "₹27,999",
     "discount": "17%",
@@ -164,6 +162,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.3,
     "numRatings": 7924,
     "numReviews": 633,
+    "offprice": "Extra ₹23000 off",
     "price": "₹29,999",
     "originalPrice": "₹52,999",
     "discount": "43%",
@@ -187,6 +186,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.6,
     "numRatings": 3008,
     "numReviews": 145,
+    "offprice": "Extra ₹18000 off",
     "price": "₹1,19,999",
     "originalPrice": "₹1,37,999", 
     "discount": "13%",
@@ -210,6 +210,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.4,
     "numRatings": 89406,
     "numReviews": 4620,
+    "offprice": "Extra ₹5000 off",
     "price": "₹14,499",
     "originalPrice": "₹19,499",
     "discount": "25%",
@@ -233,6 +234,7 @@ const MOCK_PRODUCTS = [
     "rating": 4.5,
     "numRatings": 56015,
     "numReviews": 3095,
+    "offprice": "Extra ₹5000 off",
     "price": "₹20,999",
     "originalPrice": "₹25,999",
     "discount": "19%",
@@ -257,11 +259,9 @@ const SearchBar = ({ onSearch, currentSearchTerm }) => {
     const handleInputChange = (e) => {
         setInput(e.target.value);
     };
-
     const handleSearchClick = () => {
         onSearch(input.trim());
     };
-
     const handleKeyDown = (e) => {
         if (e.key === 'Enter') {
             handleSearchClick();
@@ -269,14 +269,10 @@ const SearchBar = ({ onSearch, currentSearchTerm }) => {
     };
 
     return (
-        // Using custom class search-bar-container
         <div className="search-bar-container">
-            {/* Using custom class search-button */}
             <button onClick={handleSearchClick} className="search-button" aria-label="Search" >
-                {/* SVG for search icon - styles are now handled by search-button */}
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Search Icon</title><path d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z" stroke="#717478" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16 16L21 21" stroke="#717478" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             </button>
-            {/* Using custom class search-input */}
             <input type="text" placeholder="Search for Products, Brands and More" value={input} onChange={handleInputChange} onKeyDown={handleKeyDown} className="search-input" />
         </div>
     );
@@ -286,37 +282,30 @@ const SearchBar = ({ onSearch, currentSearchTerm }) => {
 const ProductCard = ({ product, onClick }) => {
     return (
       // Using custom class product-card
-      <div className="product-card" onClick={onClick} >
-        {/* Using custom class product-image */}
+      <div className="product-card" onClick={onClick}>
         <div className="product-image-container">
           <img src={product.imageUrl} alt={product.name} className="product-image" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/150x150/cccccc/333333?text=Image+Missing"; }} /> 
         </div>
        
         <div className="card-content">
-          {/* Using custom class product-name */}
-          <h3 className="product-name">{product.name}</h3>
-
+          <h3 className="product-name">{product.name}</h3>       
           <div className="product-rating-assured">
             <div className="rating-pill">
                 <span className="rating-text-bold">{product.rating}</span>
                 <span className="rating-star-icon">★</span>
             </div>
             <span className="rating-text">({formatNumber(product.numRatings)})</span>
-            {product.assured && <span className="assured-badge"><img height = "21" src = "./images/fa_9e47c1.png" /></span>}
+            {product.assured && <span className="assured-badge"><img height="21" src="./images/fa_9e47c1.png" /></span>}
           </div>
 
           <div className="product-specs">
-            {/* Using custom class spec-list */}
             <ul className="spec-list">
               {product.specs.slice(0, 3).map((spec, index) => (
                 <li key={index} className="spec-list-item">{spec.split('|')[0].trim()}</li>
               ))}
-            </ul>
-            {/* Using custom class charger-info */}
+              </ul>
             <p className="charger-info">{product.charger}</p>
           </div>
-
-          {/* Using custom class price-details */}
           <div className="price-details">
             <span className="product-price">{product.price}</span>
             {product.originalPrice && <span className="original-price">{product.originalPrice}</span>}
@@ -370,13 +359,11 @@ const ExtendedNavbar = () => {
   return (
     // Using custom class extended-navbar-container
     <div className="extended-navbar-container">
-      {/* Using custom class extended-navbar-nav */}
       <nav className="extended-navbar-nav">
         {categories.map((cat, index) => (
-          // Using custom class extended-nav-item
           <a key={index} href="#" className="extended-nav-item" onClick={(e) => e.preventDefault()}>
             {cat.name}
-            {cat.hasChevron && <span className="chevron-icon"><svg width="4.7" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="CGMB7B"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="CPYntE"></path></svg></span>}
+            {cat.hasChevron && <span className="chevron-icon">▼</span>}
           </a>
         ))}
       </nav>
@@ -427,19 +414,20 @@ const ImageCarousel = () => {
     }, [nextSlide]);
 
     return (
+        // Using custom class carousel-container
         <div className="carousel-container"> 
 
-            <div className="carousel-track" style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-            >
+  
+            <div className="carousel-track" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {banners.map(banner => (
                     // Using custom class carousel-slide and carousel-image
                     <div key={banner.id} className="carousel-slide">
-                        <img src={banner.imageUrl} alt={banner.alt} className="carousel-image" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/1200x400/e0e0e0/333333?text=Promo+Banner"; }}/>
+                        <img  src={banner.imageUrl}  alt={banner.alt}  className="carousel-image"  onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/1200x400/e0e0e0/333333?text=Promo+Banner"; }} />
                     </div>
                 ))}
             </div>
 
-            {/* Navigation Button */}
+            {/* Navigation Buttons */}
             <button className="carousel-prev carousel-nav-btn" onClick={prevSlide} aria-label="Previous Slide">
                 &lt;
             </button>
@@ -447,10 +435,15 @@ const ImageCarousel = () => {
                 &gt;
             </button>
 
-            {/* Pagination Dot */}
+            {/* Pagination Dots */}
             <div className="carousel-pagination">
                 {banners.map((_, index) => (
-                    <span key={index} className={`pagination-dot ${index === activeIndex ? 'active' : ''}`}onClick={() => setActiveIndex(index)} aria-label={`Go to slide ${index + 1}`}>
+                    <span 
+                        key={index} 
+                        className={`pagination-dot ${index === activeIndex ? 'active' : ''}`}
+                        onClick={() => setActiveIndex(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                    >
                     </span>
                 ))}
             </div>
@@ -461,7 +454,6 @@ const ImageCarousel = () => {
 const BrandDirectory = () => {
     // Content data... (omitted for brevity)
     const sections = [
-        // ... (section data remains the same)
         {
             title: "MOST SEARCHED FOR ON FLIPKART",
             links: [
@@ -507,18 +499,16 @@ const BrandDirectory = () => {
     ];
 
     const LinkItem = ({ link }) => (
-        // Using custom class directory-link
         <a href="#" className="directory-link" onClick={(e) => e.preventDefault()}>{link}</a>
     );
 
     return (
-        // Using custom class brand-directory-container
         <div className="brand-directory-container">
             <h2 className="directory-main-title">Top Stories: Brand Directory</h2>
             {sections.map((section, index) => (
                 <div key={index} className="directory-section">
-                      <div className="directory-links-wrapper">
                     <h3 className="directory-section-title">{section.title}:</h3>
+                    <div className="directory-links-wrapper">
                         {section.links.map((link, linkIndex) => (
                             <LinkItem key={linkIndex} link={link} />
                         ))}
@@ -537,7 +527,6 @@ const Footer = () => {
     const AddressBlock = ({ children }) => <p className="address-block">{children}</p>;
 
     return (
-        // Using custom class main-footer
         <footer className="main-footer">
             <div className="footer-content-top">
                 
@@ -617,7 +606,7 @@ const Footer = () => {
     );
 }
 
-/* 1. LANDING PAGE (Main Home Page) - Now includes ImageCarousel */
+/* 1. LANDING PAGE */
 const LandingPage = ({ onNavigate }) => {
     return (
       <div className="page-container">
@@ -641,16 +630,14 @@ const LandingPage = ({ onNavigate }) => {
     );
 };
 
-/* 2. MOBILE LIST PAGE (Search Results Section) */
+/* 2. MOBILE LIST PAGE */
 const MobileListPage = ({ searchTerm, onClearSearch, onNavigate }) => {
     const filteredProducts = useMemo(() => {
         if (!searchTerm) {
             return MOCK_PRODUCTS;
         }
-
         const lowerCaseSearch = searchTerm.toLowerCase();
         
-        // Filtering logic: checks name, color/storage, and all specifications
         return MOCK_PRODUCTS.filter(product =>
             product.name.toLowerCase().includes(lowerCaseSearch) ||
             product.colorAndStorage.toLowerCase().includes(lowerCaseSearch) ||
@@ -688,7 +675,6 @@ const MobileListPage = ({ searchTerm, onClearSearch, onNavigate }) => {
                 </div>
             )}
             
-            {/* Display the Brand Directory only when there are products */}
             {filteredProducts.length > 0 && <BrandDirectory />}
         </div>
     );
@@ -714,32 +700,26 @@ const ProductDetail = ({ productId, onGoBack }) => {
     <div className="page-container">
       <ExtendedNavbar />
       
-      {/* Back button with custom class */}
       <button onClick={onGoBack} className="back-button">
         <span className="back-arrow">←</span>
         Back to Mobile List
       </button>
-
-      {/* Main detail wrapper with custom class */}
       <div className="product-detail-wrapper">
-        
-        {/* Image Column with custom class */}
         <div className="detail-image-container">
           <img src={product.imageUrl} alt={product.name} className="detail-image" onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x400/cccccc/333333?text=Product+Image"; }}/>
           
           <div className="detail-actions">
             <button className="btn-cart">
-              <span className="btn-icon"><svg class="NwyjNT" width="16" height="16" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg"><path class="" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg></span>
-              ADD TO CART
+              <span className="btn-icon"><svg class="New-one" width="16" height="16" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg"><path class="" d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86" fill="#fff"></path></svg></span>
+            ADD TO CART
             </button>
             <button className="btn-buy">
-              <span className="btn-icon"><svg width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v7.7h2.1V14L7 5.6H4.2L7 0" fill="#FFF"/></svg></span>
-              BUY NOW
+              <span className="btn-icon"><svg class="New-one" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v7.7h2.1V14L7 5.6H4.2L7 0" fill="#FFF"/></svg></span>
+              bUY NOW
             </button>
           </div>
         </div>
 
-        {/* Info Column with custom class */}
         <div className="detail-info-section">
           <h1 className="detail-name">{product.name} <span className="detail-color-storage">{product.colorAndStorage}</span></h1>
 
@@ -748,15 +728,42 @@ const ProductDetail = ({ productId, onGoBack }) => {
               {product.rating} <span className="rating-star-filled">★</span>
             </div>
             <span className="detail-rating-count">{product.numRatings.toLocaleString('en-IN')} Ratings & {product.numReviews.toLocaleString('en-IN')} Reviews</span>
-            {product.assured && <span className="assured-badge-large">FAssured</span>}
+            {product.assured && <span className="assured-badge-large"><img height="21" src="./images/fa_9e47c1.png" /></span>}
           </div>
 
           <div className="detail-price-box">
+            <p className="off-price">{product.offprice}</p>
             <p className="detail-price">{product.price}</p>
-            {product.originalPrice && <p className="detail-original-price"><span className="strikethrough-price">M.R.P: {product.originalPrice}</span></p>}
+            {product.originalPrice && <p className="detail-original-price">
+            <span className="strikethrough-price">M.R.P: {product.originalPrice}</span></p>}
             {product.discount && <p className="detail-discount">{product.discount} off</p>}
+            <p className="price-fee">+ 79 Protect Promise <span className="fees">Fee Learn more</span></p>
+            <p className="secure">Secure delivery by 10 Oct, Friday</p>
           </div>
           
+          <div className="detail-offers-block">
+            <h3 className="detail-subtitle">Available Offers</h3>
+            <div className="detail-offer-list">
+                {product.exchangeOffer && (
+                    <div className="offer-item">
+                        <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
+                        <p>Bank Offer 5% cashback on Axis Bank Flipkart Debit Card up to 750 T&C</p>
+                    </div>
+                )}
+                <div className="offer-item">
+                    <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
+                    <p>Bank Offer 5% cashback on Flipkart SBI Credit Card upto 4,000 per calendar quarter T&C</p>
+                </div>
+                 <div className="offer-item">
+                    <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
+                    <p>Bank Offer 5% cashback on Flipkart Axis Bank Credit Card upto 4,000 per statement quarter T&C</p>
+                </div>
+                 <div className="offer-item">
+                    <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
+                    <p>Special Price Get extra 16000 off T&C</p>
+                </div>
+                <p>View 5 more</p>
+
           <div className="detail-features">
             <h3 className="detail-subtitle">Product Highlights</h3>
             <ul className="detail-feature-list">
@@ -765,20 +772,6 @@ const ProductDetail = ({ productId, onGoBack }) => {
                 ))}
             </ul>
           </div>
-          
-          <div className="detail-offers-block">
-            <h3 className="detail-subtitle">Available Offers</h3>
-            <div className="detail-offer-list">
-                {product.exchangeOffer && (
-                    <div className="offer-item">
-                        <span className="offer-icon">✔️</span>
-                        <p>Exchange Offer: Get up to **₹{product.exchangeOffer}** off on exchange of an old device.</p>
-                    </div>
-                )}
-                <div className="offer-item">
-                    <span className="offer-icon">✔️</span>
-                    <p>Bank Offer: 10% instant discount on XYZ Bank Credit Card T&C</p>
-                </div>
                 {product.lowestPriceLive && (
                     <div className="offer-item lowest-price">
                         <span className="offer-icon">🔥</span>
@@ -794,7 +787,6 @@ const ProductDetail = ({ productId, onGoBack }) => {
 };
 
 // --- MAIN APP COMPONENT ---
-
 const App = () => {
   const [currentView, setCurrentView] = useState('HOME');
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -852,28 +844,22 @@ const App = () => {
   };
 
   return (
-    // Using custom class app-container
     <div className="app-container">
 
-      {/* Using custom class header */}
       <header className="header">
         <div className="header-inner">
           
-          {/* Logo - Using custom class header-title */}
+          {/* Logo */}
           <div className="header-title" onClick={handleGoHome}>
             <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" width="160" height="40" alt="Flipkart Logo" className="header-logo"/>
           </div>
-          
-          {/* Search Bar (Centered) */}
           <SearchBar onSearch={handleSearch} currentSearchTerm={searchTerm} />
            
-          {/* Right Icons - Using custom class header-right */}
           <div className="header-right">
-            {/* These items rely on base flex/a styles but are contained in header-right */}
             <a className="header-link" href="#" onClick={(e) => e.preventDefault()}>
               <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg" alt="Login" className="header-icon"/>
               <div className="names">Login</div>
-              <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K" alt="Chevron" className="imgs" width="12" height="12"></img>
+              <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF80OTc0Xzc1OTY5KSI+CjxwYXRoIGQ9Ik0zIDJMNyA2TDExIDIiIHN0cm9rZT0iIzExMTExMiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfNDk3NF83NTk2OSIgeD0iMC4yNSIgeT0iMC4yNSIgd2lkdGg9IjEzLjUiIGhlaWdodD0iOS44MTI1IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIiByZXN1bHQ9ImhhcmRBbHBoYSIvPgo8ZmVPZmZzZXQgZHk9IjEiLz4KPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMSIvPgo8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMC4xNiAwIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0iZWZmZWN0MV9kcm9wU2hhZG93XzQ5NzRfNzU5NjkiLz4KPGZlQmxlbmQgbW9kZT0ibm9ybWFsIiBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJlZmZlY3QxX2Ryb3BTaGFkb3dfNDk3NF83NTk2OSIgcmVzdWx0PSJzaGFwZSIvPgo8L2ZpbHRlcj4KPC9kZWZzPgo8L3N2Zz4K" alt="Chevron" className="header-ch" width="12" height="12"></img>
             </a>
             <a className="header-link" href="#" onClick={(e) => e.preventDefault()}>
               <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg" alt="Cart" className="header-icon"/>
@@ -889,19 +875,13 @@ const App = () => {
           </div>
         </div>
       </header>
-      
-      {/* Category Navbar: Only show on HOME view */}
+    
       {currentView === 'HOME' && <Navbar />}
-      
-      {/* Image Carousel: Only show on HOME view */}
       {currentView === 'HOME' && <ImageCarousel />}
 
-      {/* Using custom class main-content */}
       <main className="main-content">
         {renderContent()}
       </main>
-      
-      {/* Footer is using its own component class: main-footer */}
       <Footer />
     </div>
   );

@@ -252,6 +252,139 @@ const MOCK_PRODUCTS = [
   }
 ];
 
+// const productData = [
+//   {
+//    id: 1,
+//     imgSrc: "https://rukminim2.flixcart.com/image/110/110/l111lzk0/cycle/m/r/e/xc-900-grey-lite-26-15-5-cradiac-21-gear-120-original-imagczuzpxeweczm.jpeg?q=90",
+//     altText: "Cycle",
+//     title: "Geared Cycles",
+//     offer: "Up to 70% Off",
+//     link: "#"
+//   },
+//   {
+//     id: 2,
+//     imgSrc: <img src="https://rukminim2.flixcart.com/image/110/110/kx50gi80/pen/h/z/k/119766-flair-original-imag9nzubznagufg.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/50/50/kx50gi80/pen/h/z/k/119766-flair-original-imag9nzubznagufg.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/100/100/kx50gi80/pen/h/z/k/119766-flair-original-imag9nzubznagufg.jpeg?q=60 2x, " fetchpriority="auto"></img>
+//     altText: "Stationery",
+//     title: "Top Selling Stationery",
+//     offer: "From ₹49",
+//     link: "#"
+//   },
+//   {
+//     id: 3,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/110/110/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/50/50/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/100/100/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Toys",
+//     title: "Best of Action Toys",
+//     offer: "Up to 70% Off",
+//     link: "#"
+//   },
+//   {
+//     id: 4,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/110/110/kzzw5u80/coffee/s/b/x/-original-imagbwf3wvhzfh5z.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/50/50/kzzw5u80/coffee/s/b/x/-original-imagbwf3wvhzfh5z.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/100/100/kzzw5u80/coffee/s/b/x/-original-imagbwf3wvhzfh5z.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Coffee",
+//     title: "Coffee Powder",
+//     offer: "Up to 80% Off",
+//     link: "#"
+//   },
+//   {
+//     id: 5,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/110/110/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/50/50/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/100/100/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Remote Toys",
+//     title: "Remote Control Toys",
+//     offer: "Up to 80% Off",
+//     link: "#"
+//   },
+//   {
+//     id: 6,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/110/110/kl5hh8w0/puzzle/g/n/g/60-wooden-earth-jigsaw-puzzle-60-pcs-webby-original-imagyc8hsdztzdzb.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/50/50/kl5hh8w0/puzzle/g/n/g/60-wooden-earth-jigsaw-puzzle-60-pcs-webby-original-imagyc8hsdztzdzb.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/100/100/kl5hh8w0/puzzle/g/n/g/60-wooden-earth-jigsaw-puzzle-60-pcs-webby-original-imagyc8hsdztzdzb.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Puzzles",
+//     title: "Puzzles & Cubes",
+//     offer: "From ₹79",
+//     link: "#"
+//   },
+//   {
+//     id: 7,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/190/190/xif0q/shoe/l/f/y/10-trm2542-10-0-trm-black-original-imahf438dpg2w8y7.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/90/90/xif0q/shoe/l/f/y/10-trm2542-10-0-trm-black-original-imahf438dpg2w8y7.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/180/180/xif0q/shoe/l/f/y/10-trm2542-10-0-trm-black-original-imahf438dpg2w8y7.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Shoes",
+//     title: "Men's Footwear",
+//     offer: "Min.50% Off",
+//     link: "#"
+//   },
+//   {
+//     id: 8,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/190/190/xif0q/watch/c/e/4/1-waterproof-sports-square-electronic-led-mahi-trendz-boys-original-imahdjdggag838pz.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/90/90/xif0q/watch/c/e/4/1-waterproof-sports-square-electronic-led-mahi-trendz-boys-original-imahdjdggag838pz.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/180/180/xif0q/watch/c/e/4/1-waterproof-sports-square-electronic-led-mahi-trendz-boys-original-imahdjdggag838pz.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Watches",
+//     title: "Analog Watches",
+//     offer: "Grab Now!",
+//     link: "#"
+//   },
+// ]
+
+// const productData1 = [
+//    id: 1,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/s/k/z/-original-imahggexgfcf3hpf.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/40/40/xif0q/mobile/s/k/z/-original-imahggexgfcf3hpf.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/80/80/xif0q/mobile/s/k/z/-original-imahggexgfcf3hpf.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Samsung phone",
+//     title: "Samsung Galaxy F10",
+//     offer: "Just ₹68,999* ",
+//     link: "#"
+//   },
+//   {
+//     id: 2,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/h/y/a/-original-imahggetemyxpf86.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/40/40/xif0q/mobile/h/y/a/-original-imahggetemyxpf86.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/80/80/xif0q/mobile/h/y/a/-original-imahggetemyxpf86.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Pixel phone",
+//     title: "Google Pixel 9",
+//     offer: "From ₹62,999*",
+//     link: "#"
+//   },
+//   {
+//     id: 3,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/e/l/m/-original-imahcfcfhxrf5hzg.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/40/40/xif0q/mobile/e/l/m/-original-imahcfcfhxrf5hzg.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/80/80/xif0q/mobile/e/l/m/-original-imahcfcfhxrf5hzg.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Nothing",
+//     title: "Nothing Phone",
+//     offer: "From ₹22,999",
+//     link: "#"
+//   },
+//   {
+//     id: 4,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/5/v/y/-original-imah9gtmsuutundb.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/40/40/xif0q/mobile/5/v/y/-original-imah9gtmsuutundb.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/80/80/xif0q/mobile/5/v/y/-original-imah9gtmsuutundb.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Realme phone",
+//     title: "Realme P3x5C",
+//     offer: "Just ₹12,499",
+//     link: "#"
+//   },
+//   {
+//     id: 5,
+//     imgSrc: "<img src="https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/6/a/9/-original-imahfw4vxaqmcsjp.jpeg?q=90" alt="Image" class="" style="filter: none; opacity: 1; transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 1 / 1;" aria-busy="false" data-highres-loaded="false" loading="lazy" srcset="https://rukminim2.flixcart.com/image/40/40/xif0q/mobile/6/a/9/-original-imahfw4vxaqmcsjp.jpeg?q=80 1x, https://rukminim2.flixcart.com/image/80/80/xif0q/mobile/6/a/9/-original-imahfw4vxaqmcsjp.jpeg?q=60 2x, " fetchpriority="auto">",
+//     altText: "Oppo phone",
+//     title: "Oppo K13x 5G",
+//     offer: "Just ₹10,749",
+//     link: "#"
+//   },
+//   {
+//     id: 6,
+//     imgSrc: "https://rukminim2.flixcart.com/image/120/120/kl5hh8w0/puzzle/g/n/g/60-wooden-earth-jigsaw-puzzle-60-pcs-webby-original-imagyc8hsdztzdzb.jpeg?q=90",
+//     altText: "Puzzles",
+//     title: "Puzzles & Cubes",
+//     offer: "From ₹79",
+//     link: "#"
+//   },
+//   {
+//     id: 7,
+//     imgSrc: "https://rukminim2.flixcart.com/image/120/120/xif0q/mobile/6/9/t/-original-imahfkvfhpfaftmb.jpeg?q=90",
+//     altText: "Vivo phone",
+//     title: "vivo T4 Lite 5G",
+//     offer: "From ₹9,999",
+//     link: "#"
+//   },
+//   {
+//     id: 8,
+//     imgSrc: "https://rukminim2.flixcart.com/image/120/120/kkimfm80/tea/z/n/1/premium-pouch-regular-tea-powder-tata-original-imafzuf2mnubzphd.jpeg?q=90",
+//     altText: "Tea",
+//     title: "Tea Packets",
+//     offer: "Upto 75% off",
+//     link: "#"
+//   },
+// ]
+
 /* Search Input */
 const SearchBar = ({ onSearch, currentSearchTerm }) => {
     const [input, setInput] = useState(currentSearchTerm || '');
@@ -357,7 +490,6 @@ const ExtendedNavbar = () => {
     { name: "Offer Zone" }, 
   ];
   return (
-    // Using custom class extended-navbar-container
     <div className="extended-navbar-container">
       <nav className="extended-navbar-nav">
         {categories.map((cat, index) => (
@@ -417,7 +549,6 @@ const ImageCarousel = () => {
         // Using custom class carousel-container
         <div className="carousel-container"> 
 
-  
             <div className="carousel-track" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {banners.map(banner => (
                     // Using custom class carousel-slide and carousel-image
@@ -715,7 +846,7 @@ const ProductDetail = ({ productId, onGoBack }) => {
             </button>
             <button className="btn-buy">
               <span className="btn-icon"><svg class="New-one" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M0 0v7.7h2.1V14L7 5.6H4.2L7 0" fill="#FFF"/></svg></span>
-              bUY NOW
+              BUY NOW
             </button>
           </div>
         </div>
@@ -733,10 +864,13 @@ const ProductDetail = ({ productId, onGoBack }) => {
 
           <div className="detail-price-box">
             <p className="off-price">{product.offprice}</p>
+            <div className="priced">
             <p className="detail-price">{product.price}</p>
             {product.originalPrice && <p className="detail-original-price">
             <span className="strikethrough-price">M.R.P: {product.originalPrice}</span></p>}
             {product.discount && <p className="detail-discount">{product.discount} off</p>}
+            </div>
+            {/* <div><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="dhBD+z"><defs><circle id="b" cx="8" cy="8" r="8"></circle><filter id="a" width="130%" height="130%" x="-15%" y="-8.8%" filterUnits="objectBoundingBox"><feMorphology in="SourceAlpha" operator="dilate" radius=".4" result="shadowSpreadOuter1"></feMorphology><feOffset dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".5"></feGaussianBlur><feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite><feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix></filter></defs><g fill="none" fill-rule="evenodd"><g transform="translate(2 1)"><use fill="#000" filter="url(#a)" xlink:href="#b"></use><use fill="#FCFCFC" stroke="#000" stroke-opacity=".3" stroke-width=".8" xlink:href="#b"></use></g><text fill="#1D1D1D" font-family="Roboto-Medium, Roboto" font-size="11" font-weight="400" opacity=".59" transform="translate(2 1)"><tspan x="6.6" y="12.2">i</tspan></text></g></svg></div> */}
             <p className="price-fee">+ 79 Protect Promise <span className="fees">Fee Learn more</span></p>
             <p className="secure">Secure delivery by 10 Oct, Friday</p>
           </div>
@@ -747,22 +881,22 @@ const ProductDetail = ({ productId, onGoBack }) => {
                 {product.exchangeOffer && (
                     <div className="offer-item">
                         <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
-                        <p>Bank Offer 5% cashback on Axis Bank Flipkart Debit Card up to 750 T&C</p>
+                        <p>Bank Offer 5% cashback on Axis Bank Flipkart Debit Card up to ₹750 <span className="bankoffer">T&C</span></p>
                     </div>
                 )}
                 <div className="offer-item">
                     <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
-                    <p>Bank Offer 5% cashback on Flipkart SBI Credit Card upto 4,000 per calendar quarter T&C</p>
+                    <p>Bank Offer 5% cashback on Flipkart SBI Credit Card upto ₹4,000 per calendar quarter <span className="bankoffer">T&C</span></p>
                 </div>
                  <div className="offer-item">
                     <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
-                    <p>Bank Offer 5% cashback on Flipkart Axis Bank Credit Card upto 4,000 per statement quarter T&C</p>
+                    <p>Bank Offer 5% cashback on Flipkart Axis Bank Credit Card upto ₹4,000 per statement quarter <span className="bankoffer">T&C</span></p>
                 </div>
                  <div className="offer-item">
                     <span className="offer-icon"><img src="https://rukminim2.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" width="18" height="18" class="yNKwUY" /></span>
-                    <p>Special Price Get extra 16000 off T&C</p>
+                    <p>Special Price Get extra ₹16000 off T&C</p>
                 </div>
-                <p>View 5 more</p>
+                <p className="fees">View 5 more</p>
 
           <div className="detail-features">
             <h3 className="detail-subtitle">Product Highlights</h3>
@@ -786,7 +920,7 @@ const ProductDetail = ({ productId, onGoBack }) => {
   );
 };
 
-// --- MAIN APP COMPONENT ---
+// --- MAIN APP COMPONENT --- //
 const App = () => {
   const [currentView, setCurrentView] = useState('HOME');
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -884,7 +1018,8 @@ const App = () => {
       </main>
       <Footer />
     </div>
-  );
+  );                                                 
 };
 
 export default App;
+

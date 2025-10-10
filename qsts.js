@@ -1,3 +1,5 @@
+import { FaLevelDownAlt, FaNs8 } from "react-icons/fa";
+
 // Reverse string
 const str = "hello world";
 const reversedStr = str.split('')
@@ -495,10 +497,7 @@ const problem34_percentBelowMarkAllSubjects = (data, targetMark) => {
     return `${percentage.toFixed(2)}% of students scored below ${targetMark} in ALL subjects.`;
 };
 
-
-// =========================================================
 // 3. DEMONSTRATION OF OUTPUT
-// =========================================================
 
 console.log("--- Problem 1-5 Demonstrations ---");
 console.log(`P1: ${problem1_printClassName()}`);
@@ -523,3 +522,130 @@ console.log("\n--- Problem 27 & 31 Demonstrations (Counting/Percentage) ---");
 console.log(`P27: ${problem27_countAboveMarkSubject(students, "History", 80)}`);
 console.log(`P31: ${problem31_percentAboveMarkSubject(students, "History", 80)}`);
 
+
+
+
+let result = 3 + 2 + "10";
+console.log(result);
+
+// var - declares variable with function or global scope and allows re-declaration ,updates within same scope
+// let - declares variables with block scope, allowing updates but not redeclaration within same block
+// const - declares block-scoped variables that cannot be reassigned after their initial assignment 
+
+// Scopes:-
+// global - outermost level 
+// local - inner faN, from parent fns 
+// fn - confined to fn they are declared in
+// block - variables declared with let or const are confined to nearest block(loops, conditionals, etc)
+
+
+// console.log(null ?? 'default');          o/p - default
+// console.log(undefined ?? 'default');     o/p - default
+// console.log(false ?? 'default');         o/p - false(it is neither null nor undefined)
+// ?? ---  coalescing operator returns right-hand side only if the left is null or undefined
+
+
+// delete property-specific values
+//   let gf={Course: "Maths", Duration:30};
+//   delete gf.Course;
+
+
+//   Undefined :-            (value not assigned yet)      
+//    let x;                 //undefined        
+//    console.log(x);
+
+   function foo(a) {        //undefined if no argument is passed
+    console.log(a);
+   }
+   foo();
+
+
+//    null:-     (value is empty or non-existent)
+//     let user - null;              //explicit assignment
+//     console.log(user);           //null
+
+
+//     call() Method:-  calls method taking owner object as argument 
+//     apply() Method:- used to write methods, used on different objects and it takes arguments as an array
+
+// Explicit Binding: call(), apply(), bind()
+
+
+// Hoisting in JS 
+//    Variables and fn declarations moved to the top of their containing scope during MdCompassCalibration, before code is executed .
+//     eg: b = 2;
+//         alert('b='+b);
+//         Var b;
+
+// Closures 
+//     it is created when a child fns to keep the environment of parent scope even after parent fn has already executed.
+//     closure is locally declared variable related to a fn. Closure provides better control over code when using them . 
+// function foo() {
+//     let b = 1;
+//     function inner() {
+//         return b;
+//     }
+//     return inner;
+// }
+// let get_func_inner = foo();
+
+// console.log(get_func_inner());  o/p: 1
+// console.log(get_func_inner());  o/p: 1
+// console.log(get_func_inner());  o/p: 1
+
+
+
+// Define a function as a property of an object:-
+//   obj.func=function() {...}
+//   obj.func=()=>{...}
+   
+// Create an object:-
+//     let obj = {key:"value"};
+
+
+// Object.assign() is used to merge 2 objects 
+
+// Prototype property  - to define methods and properties for inheritance
+
+// To create a deep copy of an object - JSON.stringify() and JSON.parse()
+
+
+// get keyword - define a getter method in objs to retrieve a property value. 
+//               get name() { return this._name; }
+
+
+
+// Fn to check if the input is an array 
+    var is_array = function(input) {
+        if (toString.call(input) === "[object Array]")
+          return true;
+          return false;
+    };
+    console.log(is_array('w3resource'));     //false
+    console.log(is_array([1, 2, 4, 0]));     //true  
+
+
+//Sort array
+    var arr6 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+    var arr5 = [];
+    var min = arr1[0];
+    var pos;                                    
+    var max = arr1[0];
+           for (i=0; i< arr1.length; i++) {
+              if (max < arr1[i]) max = arr1[i];
+           }
+           for (var i=0; i < arr1.length; i++) {
+            for (var j = 0; j < arr1.length; j++) {     
+                if (arr1[j] != "x") {
+                    if (min > arr1[j]) {
+                        min = arr1[j];
+                        pos = j;
+                    }
+                }
+            }
+
+            arr5[i] = min;
+            arr6[pos] = "x";
+            min = max;
+           }
+           console.log(arr2);     o/p  - [-4,-3,1,2,3,5,6,7,8] 
